@@ -1,0 +1,1 @@
+This project was created using [Create React App](https://github.com/facebook/create-react-app). To learn more and configure additional features, please [refer to the documentation](https://facebook.github.io/create-react-app/docs/getting-started).
