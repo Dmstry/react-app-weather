@@ -5,16 +5,25 @@ export const App = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [tempUnit, setTempUnit] = useState('C');
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(
-        `${API_BASE_URL}?latitude=47.9477&longitude=35.4403&current=temperature_2m,wind_speed_10m,precipitation,cloud_cover&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m&forecast_days=7&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum&curent_unit=${tempUnit}`
-      );
-      const data = await response.json();
-      setWeatherData(data);
-      // console.log('data', data);
+  async function fetchData() {
+    let temperatureUnitParam = '';
+
+    if (tempUnit === 'C') {
+      temperatureUnitParam = '';
+    } else if (tempUnit === 'F') {
+      temperatureUnitParam = '&temperature_unit=fahrenheit';
     }
-    fetchData();
+
+    const response = await fetch(
+      `${API_BASE_URL}?latitude=47.9477&longitude=35.4403&timezone=auto&current=temperature_2m,wind_speed_10m,precipitation,cloud_cover&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m&forecast_days=7&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum&curent_unit=${tempUnit}${temperatureUnitParam}`
+    );
+    const data = await response.json();
+    setWeatherData(data);
+    // console.log('data', data);
+  }
+  useEffect(() => {
+    fetchData(); // Додаємо fetchData до списку залежностей useEffect
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tempUnit]);
 
   console.log('weatherData', weatherData)
@@ -41,6 +50,7 @@ export const App = () => {
       </header>
       <main>
         <h2>Current Weather</h2>
+        <span>{weatherData.current.time}</span>
         <ul>
           <li>
             Temperature: {weatherData.current.temperature_2m.toFixed(0)}°{' '}
