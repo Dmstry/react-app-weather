@@ -1,4 +1,5 @@
 import React from 'react';
+import 'weather-icons/css/weather-icons.css'
 
 const WeatherForecast = ({ weatherData, tempUnit }) => {
   return (
@@ -11,7 +12,7 @@ const WeatherForecast = ({ weatherData, tempUnit }) => {
             <li key={day}>
               <h3>{day}</h3>
               <ul>
-                <li>WMO Code: {weatherData.daily.weather_code[index]}</li>
+                <li><i className={`wi wi-wmo4680-${weatherData.daily.weather_code[index]}`}></i></li>
                 <li>
                   Max Temperature: {weatherData.daily.temperature_2m_max[index]}°{tempUnit}
                 </li>

@@ -1,4 +1,5 @@
 import React from 'react';
+import 'weather-icons/css/weather-icons.css'
 
 const CurrentWeather = ({ weatherData, tempUnit }) => {
   return (
@@ -7,7 +8,7 @@ const CurrentWeather = ({ weatherData, tempUnit }) => {
       <span>{weatherData.current.time}</span>
       <ul>
         <li>
-          WMO Code: {weatherData.current.weather_code}
+          <i className={`wi wi-wmo4680-${weatherData.current.weather_code}`}></i>
         </li>
         <li>
           Temperature: {weatherData.current.temperature_2m.toFixed(0)}° {tempUnit}

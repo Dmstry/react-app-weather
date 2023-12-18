@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Header = ({ tempUnit, handleTempUnitChange }) => {
+const Header = ({ tempUnit, handleTempUnitChange, handleForecastPeriodChange }) => {
+  // const changeForecastPeriod = (event) => {
+  //   handleForecastPeriodChange(event.target.value);
+  // };
+
   return (
     <header>
       <h1>Weather App</h1>
@@ -11,6 +15,12 @@ const Header = ({ tempUnit, handleTempUnitChange }) => {
           <option value="F">Fahrenheit</option>
         </select>
       </label>
+      <div>
+        Forecast Period:
+        <button onClick={() => handleForecastPeriodChange('3days')}>3 Days</button>
+        <button onClick={() => handleForecastPeriodChange('7days')}>7 Days</button>
+        <button onClick={() => handleForecastPeriodChange('hourly')}>Hourly</button>
+      </div>
     </header>
   );
 };
