@@ -1,4 +1,5 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+/* bring in normalize.css styles */
 
 body {
   margin: 0;
@@ -12,4 +13,96 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Загальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стилі для контейнера root */
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стилі для заголовка */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Стилі для вибору одиниць температури */
+label {
+  margin-left: 10px;
+}
+
+/* Стилі для періоду прогнозу */
+header div {
+  margin-top: 10px;
+}
+
+header div button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Стилі для головного контенту */
+main div {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+/* Стилі для інформації про погоду */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Стилі для значків погоди */
+i {
+  font-size: 48px;
+  /* Збільшуємо розмір іконки */
+  margin-right: 20px;
+  /* Залишаємо простір між іконкою та текстом */
+}
+
+i {
+  /* font-size: 24px; */
+  vertical-align: middle;
+}
+
+
+/* Стилі для підвалу */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
 }

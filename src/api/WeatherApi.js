@@ -6,7 +6,7 @@ export async function fetchData(tempUnit, forecastPeriod) {
   if (forecastPeriod === '3days' || forecastPeriod === '7days') {
     periodParam = `&forecast_days=${forecastPeriod.slice(0, 1)}`;
   } else if (forecastPeriod === 'hourly') {
-    periodParam = '&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m';
+    periodParam = '&hourly=temperature_2m,relative_humidity_2m,weather_code';
   }
 
   let temperatureUnitParam = '';

@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Header = ({ tempUnit, handleTempUnitChange, handleForecastPeriodChange }) => {
+const Header = ({
+  tempUnit,
+  handleTempUnitChange,
+  handleForecastPeriodChange,
+  handleShowHourlyForecast,
+}) => {
   // const changeForecastPeriod = (event) => {
   //   handleForecastPeriodChange(event.target.value);
   // };
@@ -17,9 +22,15 @@ const Header = ({ tempUnit, handleTempUnitChange, handleForecastPeriodChange }) 
       </label>
       <div>
         Forecast Period:
-        <button onClick={() => handleForecastPeriodChange('3days')}>3 Days</button>
-        <button onClick={() => handleForecastPeriodChange('7days')}>7 Days</button>
-        <button onClick={() => handleForecastPeriodChange('hourly')}>Hourly</button>
+        <button onClick={() => handleForecastPeriodChange('3days')}>
+          3 Days
+        </button>
+        <button onClick={() => handleForecastPeriodChange('7days')}>
+          7 Days
+        </button>
+        <button onClick={() => handleShowHourlyForecast()}>
+          Hourly
+        </button>
       </div>
     </header>
   );
