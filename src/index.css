@@ -75,23 +75,23 @@ ul {
   padding: 0;
 }
 
-li {
+/* li {
   margin-bottom: 5px;
   font-size: 16px;
-}
+} */
 
 /* Стилі для значків погоди */
-i {
-  font-size: 48px;
-  /* Збільшуємо розмір іконки */
-  margin-right: 20px;
-  /* Залишаємо простір між іконкою та текстом */
-}
+/* i {
+  font-size: 48px; */
+/* Збільшуємо розмір іконки */
+/* margin-right: 20px; */
+/* Залишаємо простір між іконкою та текстом */
+/* } */
 
-i {
-  /* font-size: 24px; */
-  vertical-align: middle;
-}
+/* i { */
+/* font-size: 24px; */
+/* vertical-align: middle;
+} */
 
 
 /* Стилі для підвалу */

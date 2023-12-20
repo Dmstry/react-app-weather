@@ -52,7 +52,7 @@ export const App = () => {
         {showHourlyForecast ? (
           <HourlyForecast weatherData={weatherData} tempUnit={tempUnit} />
         ) : (
-          <WeatherForecast weatherData={weatherData} tempUnit={tempUnit} />
+          <WeatherForecast weatherData={weatherData} tempUnit={tempUnit} forecastPeriod={forecastPeriod} />
         )}
       </main>
       <Footer />
