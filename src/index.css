@@ -1,9 +1,19 @@
 @import-normalize;
 /* bring in normalize.css styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700;800&display=swap");
+
+@import "utils/_commons.scss";
+@import "utils/_variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,86 +25,31 @@ code {
     monospace;
 }
 
-/* Загальні стилі */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+
+.app {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--primary-text-color);
 }
 
-/* Стилі для контейнера root */
-#root {
-  max-width: 800px;
+.app::before {
+  content: '';
+  background: url('/src/assets/sunset.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main {
+  width: 800px;
   margin: 0 auto;
-  padding: 20px;
 }
 
-/* Стилі для заголовка */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-/* Стилі для вибору одиниць температури */
-label {
-  margin-left: 10px;
-}
-
-/* Стилі для періоду прогнозу */
-header div {
-  margin-top: 10px;
-}
-
-header div button {
-  margin-right: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-}
-
-/* Стилі для головного контенту */
-main div {
-  margin-bottom: 20px;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 24px;
-}
-
-/* Стилі для інформації про погоду */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* li {
-  margin-bottom: 5px;
-  font-size: 16px;
-} */
-
-/* Стилі для значків погоди */
-/* i {
-  font-size: 48px; */
-/* Збільшуємо розмір іконки */
-/* margin-right: 20px; */
-/* Залишаємо простір між іконкою та текстом */
-/* } */
-
-/* i { */
-/* font-size: 24px; */
-/* vertical-align: middle;
-} */
-
-
-/* Стилі для підвалу */
 footer {
   text-align: center;
   margin-top: 20px;

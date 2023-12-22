@@ -40,7 +40,7 @@ export const App = () => {
   }
 
   return (
-    <>
+    <div className='app'>
       <Header
         tempUnit={tempUnit}
         handleTempUnitChange={handleTempUnitChange}
@@ -56,6 +56,6 @@ export const App = () => {
         )}
       </main>
       <Footer />
-    </>
+    </div>
   );
 };

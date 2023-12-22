@@ -1,11 +1,15 @@
 import React from 'react';
 import 'weather-icons/css/weather-icons.css'
+import { CurrentInfo } from './CurrentWeather.styled';
+
 
 const CurrentWeather = ({ weatherData, tempUnit }) => {
   return (
-    <div>
-      <h2>Current Weather</h2>
-      <span>{weatherData.current.time}</span>
+    <CurrentInfo>
+      <h2>Current Weather <br />
+        <span>{weatherData.current.time}</span>
+      </h2>
+
       <ul>
         <li>
           <i className={`wi wi-wmo4680-${weatherData.current.weather_code}`}></i>
@@ -26,7 +30,7 @@ const CurrentWeather = ({ weatherData, tempUnit }) => {
           {weatherData.current_units.wind_speed_10m}
         </li>
       </ul>
-    </div>
+    </CurrentInfo>
   );
 };
 

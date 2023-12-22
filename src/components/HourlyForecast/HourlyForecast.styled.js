@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ForecastForPeriod = styled.div`
+export const ForecastForHours = styled.div`
   background-color: var(--accent-color);
   /* border: 3px solid blue; */
   border-radius: 10px;
@@ -9,7 +9,7 @@ export const ForecastForPeriod = styled.div`
     margin: 10px 0 20px 20px;
   }
 
-  .forecastForPeriod {
+  .hoursList {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
@@ -18,7 +18,7 @@ export const ForecastForPeriod = styled.div`
     margin: 0;
 
     & > li {
-      width: calc(90% / 7);
+      width: calc(100% / 7);
       background-color: rgba(255, 255, 255, 0.2);
       flex: 0 0 auto; // Кожен елемент в ряду буде фіксованою шириною
       margin-right: 10px; // Проміжок між елементами
@@ -39,7 +39,7 @@ export const ForecastForPeriod = styled.div`
       align-items: center;
       justify-content: center;
 
-      li {
+      & > li {
         display: flex;
         margin-bottom: 16px;
         /* font-size: 18px; */
@@ -49,7 +49,7 @@ export const ForecastForPeriod = styled.div`
         font-size: 24px;
         margin-bottom: 0;
         margin-right: 4px;
-        margin-left: 2px;
+
         vertical-align: middle;
       }
 

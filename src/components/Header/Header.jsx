@@ -1,4 +1,5 @@
 import React from 'react';
+import { HeaderDiv } from './Header.styled';
 
 const Header = ({
   tempUnit,
@@ -11,7 +12,7 @@ const Header = ({
   // };
 
   return (
-    <header>
+    <HeaderDiv>
       <h1>Weather App</h1>
       <label>
         Temperature Unit:
@@ -32,7 +33,7 @@ const Header = ({
           Hourly
         </button>
       </div>
-    </header>
+    </HeaderDiv>
   );
 };
 

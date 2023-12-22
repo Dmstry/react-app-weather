@@ -1,5 +1,7 @@
 import React from 'react';
-import 'weather-icons/css/weather-icons.css'
+import 'weather-icons/css/weather-icons.css';
+import { ForecastForHours } from './HourlyForecast.styled';
+
 
 
 const HourlyForecast = ({ weatherData, tempUnit }) => {
@@ -8,9 +10,9 @@ const HourlyForecast = ({ weatherData, tempUnit }) => {
   const hoursToShow = 24 / 4; // 6 times
 
   return (
-    <div>
+    <ForecastForHours>
       <h2>Hourly Forecast</h2>
-      <ul>
+      <ul className='hoursList'>
         {weatherData &&
           weatherData.hourly &&
           weatherData.hourly.time.filter((_, index) => index % 4 === 0).slice(0, hoursToShow).map((hour, index) => {
@@ -20,13 +22,13 @@ const HourlyForecast = ({ weatherData, tempUnit }) => {
                 <h3>{hourToShow}:00</h3>
                 <ul>
                   <li>
-                    <i className={`wi wi-wmo4680-${weatherData.hourly.weather_code[index * 4]}`}></i>
+                    <i className={`exception wi wi-wmo4680-${weatherData.hourly.weather_code[index * 4]}`}></i>
                   </li>
                   <li>
-                    Temperature: {weatherData.hourly.temperature_2m[index * 4]}{'°'}{tempUnit}
+                    <i className="wi wi-thermometer-exterior"></i> {weatherData.hourly.temperature_2m[index * 4]}{'°'}{tempUnit}
                   </li>
                   <li>
-                    Humidity: {weatherData.hourly.relative_humidity_2m[index * 4]}
+                    <i className="wi wi-humidity"></i> {weatherData.hourly.relative_humidity_2m[index * 4]}
                     {weatherData.hourly_units.relative_humidity_2m}
                   </li>
                 </ul>
@@ -34,7 +36,7 @@ const HourlyForecast = ({ weatherData, tempUnit }) => {
             );
           })}
       </ul>
-    </div>
+    </ForecastForHours>
   );
 };
 
