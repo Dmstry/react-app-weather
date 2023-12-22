@@ -46,7 +46,7 @@ code {
 }
 
 main {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -60,4 +60,17 @@ footer {
 footer p {
   margin: 0;
   font-size: 14px;
+}
+
+footer .link {
+  background-color: var(--primary-text-color);
+  transition: 0.5s var(--timing-fun);
+  font-weight: 700;
+
+
+  &:hover {
+    background-color: var(--active-color);
+    color: var(--primary-text-color);
+    text-decoration: underline;
+  }
 }

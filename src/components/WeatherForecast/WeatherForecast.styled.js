@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ForecastForPeriod = styled.div`
   background-color: var(--accent-color);
-  /* border: 3px solid blue; */
   border-radius: 10px;
 
   & h2 {
@@ -13,16 +12,14 @@ export const ForecastForPeriod = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
-    overflow-x: auto; /* Додайте прокрутку, якщо елементи не вміщаються */
-    padding: 0;
+    overflow-x: auto;
     margin: 0;
 
     & > li {
       width: calc(90% / 7);
       background-color: rgba(255, 255, 255, 0.2);
-      flex: 0 0 auto; // Кожен елемент в ряду буде фіксованою шириною
-      margin-right: 10px; // Проміжок між елементами
-      /* border: 2px solid orangered; */
+      flex: 0 0 auto;
+      margin-right: 10px;
       border-radius: 10px;
     }
 
@@ -42,7 +39,6 @@ export const ForecastForPeriod = styled.div`
       li {
         display: flex;
         margin-bottom: 16px;
-        /* font-size: 18px; */
       }
 
       i {

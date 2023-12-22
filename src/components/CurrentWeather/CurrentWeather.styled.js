@@ -15,17 +15,17 @@ export const CurrentInfo = styled.div`
     justify-content: space-evenly;
     flex-wrap: nowrap;
     align-items: center;
-    overflow-x: auto; /* Додайте прокрутку, якщо елементи не вміщаються */
+    overflow-x: auto;
     padding: 0;
     margin: 20px auto;
     max-width: 800px;
     height: 80px;
     border-radius: 10px;
+    font-size: 16px;
   }
 
   & > li {
     align-items: center;
-    font-size: 18px;
   }
   & i {
     font-size: 48px;

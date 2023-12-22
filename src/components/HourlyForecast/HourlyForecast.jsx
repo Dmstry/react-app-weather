@@ -5,7 +5,7 @@ import { ForecastForHours } from './HourlyForecast.styled';
 
 
 const HourlyForecast = ({ weatherData, tempUnit }) => {
-  // Отримуємо поточний час та визначаємо кількість показів за добу
+
   const currentHour = new Date().getHours();
   const hoursToShow = 24 / 4; // 6 times
 
