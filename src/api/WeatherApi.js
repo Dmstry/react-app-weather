@@ -18,10 +18,11 @@ export async function fetchData(tempUnit, forecastPeriod) {
   }
 
   const response = await fetch(
-    `${API_BASE_URL}?latitude=47.9477&longitude=35.4403&timezone=auto&current=temperature_2m,wind_speed_10m,precipitation,cloud_cover,weather_code${periodParam}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum&curent_unit=${tempUnit}${temperatureUnitParam}`
+    `${API_BASE_URL}?latitude=47.4922&longitude=35.1125&timezone=auto&current=temperature_2m,wind_speed_10m,precipitation,cloud_cover,weather_code${periodParam}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum&curent_unit=${tempUnit}${temperatureUnitParam}`
   );
 
   const data = await response.json();
   console.log('data', data);
+  console.log('typeof(data)', typeof data);
   return data;
 }

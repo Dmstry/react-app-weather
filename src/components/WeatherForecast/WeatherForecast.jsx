@@ -13,7 +13,7 @@ const WeatherForecast = ({ weatherData, tempUnit, forecastPeriod }) => {
       periodText = 'for 7 days';
       break;
     default:
-      periodText = ''; // Додайте потрібні умови для інших варіантів періоду
+      periodText = '';
       break;
   }
   return (

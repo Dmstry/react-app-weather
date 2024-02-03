@@ -4,10 +4,21 @@ import { CurrentInfo } from './CurrentWeather.styled';
 
 
 const CurrentWeather = ({ weatherData, tempUnit }) => {
+  const formatDateTime = (dateTimeString) => {
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: false,
+    };
+    return new Date(dateTimeString).toLocaleString(undefined, options);
+  };
   return (
     <CurrentInfo>
       <h2>Current Weather <br />
-        <span>{weatherData.current.time}</span>
+        <span>{formatDateTime(weatherData.current.time)}, Zaporizhzhia</span>
       </h2>
 
       <ul>
